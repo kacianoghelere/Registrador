@@ -1,6 +1,7 @@
 $(document).ready(function(){
     var visivel1 = false;                
-    $("#menu").click(function(){    
+    $("#menu").click(function(){   
+        //alert($(this).attr('id'));
         //alert($("#sub1").css('display'));
         if (!visivel1) {
             $("#sub1").show();            
