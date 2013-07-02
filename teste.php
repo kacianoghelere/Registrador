@@ -17,24 +17,7 @@
         <div id="divforms" class="well"  align="center" 
              style="width: 200px; background-color:#CDCDCD">            
             <form action="" id="formteste">                 
-                <div>
-                    <a class="btn btn-info" id="menu">Menu Principal 1</a>
-                    <div id="sub1" style="display: none;">
-                        <?php subMenu(1,"info",2); ?>
-                    </div>
-                </div>   
-                <div>
-                    <a class="btn btn-success" id="menu2">Menu Principal 2</a><br/>
-                    <div id="sub2" style="display: none;">
-                        <?php subMenu(2,"success",3); ?>
-                    </div>
-                </div>   
-                <div>
-                    <a class="btn btn-danger" id="menu3">Menu Principal 3</a><br/>
-                    <div id="sub3" style="display: none;">
-                        <?php subMenu(3,"danger",4); ?>
-                    </div>
-                </div> 
+                <?php menu(3,6); ?>
             </form>
         </div>     
         </span>
