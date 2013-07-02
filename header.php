@@ -10,3 +10,9 @@
 <script src="js/bootbox.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.form.js"></script>
+<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
+<style type="text/css">
+    body { 
+        background-image: url("image/bg.png");
+    }
+</style>
