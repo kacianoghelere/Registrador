@@ -1,5 +1,5 @@
 $(document).ready(function(){           
-    for (var i = 1; i <= 3; i++){
+    for (var i = 0; i < 5; i++){
         $("#menu"+i).click(function(){   
             if ($("#"+$(this).attr('id')+"sub").css('display') === 'none') {                        
                 $("#"+$(this).attr('id')+"sub").fadeIn();                    
@@ -12,8 +12,8 @@ $(document).ready(function(){
             }               
         });        
     }
-    for (var i = 1; i <= 3; i++){
-        for (var j = 1; j <= 6; j++){
+    for (var i = 0; i < 5; i++){
+        for (var j = 0; j < 6; j++){
             $("#sub"+i+j).click(function(){                  
                 if ($("#mini"+$(this).attr('id')).css('display') === 'none') {
                     $("#box").html($(this).attr('id')+" aberto!");      
@@ -26,5 +26,18 @@ $(document).ready(function(){
                 }                 
             });        
         }
-    }    
+    }   
+    for (var i = 0; i < 5; i++){
+        for (var j = 0; j < 6; j++){
+            for (var h = 0; h < 6; h++){
+                $("#mini"+i+j+h).click(function(){                  
+                    $("#box").html($(this).attr('id')+" clicado!");                    
+                });  
+            }
+        }
+    }
+    $("#sel1").change(function() {
+        var values = $(this).val();      
+        $("#box").html(values);        
+    });
 });

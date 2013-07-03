@@ -10,6 +10,8 @@
 <script src="js/bootbox.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.form.js"></script>
+<!--<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="js/jquery-ui-1.10.3.custom.js"></script>-->
 <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
 <style type="text/css">
     body { 
