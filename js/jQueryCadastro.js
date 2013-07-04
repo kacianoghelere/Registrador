@@ -132,10 +132,7 @@ jQuery(document).ready(function() {
                 required: true, 
                 minlength: 7
             },
-            cpf: {
-                required: true,
-                cic: true
-            },
+            cpf:  {cic: true},
             email: {
                 required: true, 
                 email: true
@@ -151,8 +148,7 @@ jQuery(document).ready(function() {
                 minlength: 'O rg deve ter 7 digitos.'
             },
             cpf: {
-                required: 'Digite seu CPF/CNPJ',
-                cpf: 'CPF/CNPJ Invalido.'
+                required: 'Digite seu CPF/CNPJ'
             },                        
             email: {
                 required: 'Informe seu e-mail', 
