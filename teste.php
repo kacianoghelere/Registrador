@@ -35,7 +35,7 @@
             <div id="box" class="well" style="width: 300px; height: 50px; 
                  font-size: xx-large;  border: 2px solid green;" align="center"></div><br>
             <div id="divforms" class="well"  align="center" 
-                 style="width: 200px; background-color:#CDCDCD; border: 2px solid green;">               
+                 style="width: 150px; background-color:#FFFFFF; border: 2px solid green;">               
                 <form action="" id="formteste">                     
                     <?php menus(); ?>
                 </form>

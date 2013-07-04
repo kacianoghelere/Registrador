@@ -1,15 +1,17 @@
 <?php
-    function miniMenu($x,$mini){
+    function miniMenu($x,$mini,$color){
         for ($i = 0; $i < sizeof($mini); $i++){
-            echo '<a class="btn" id="mini'.$x.$i.'" style="width: 100px;">'.$mini[$i].'</a>';
+            echo '<a class="btn" id="mini'.$x.$i.'" style="width: 100px;  border: 1px solid '.$color.';">'.$mini[$i].'</a>';
         }
     }
     function subMenu($x,$style,$subs) {     
+        $colors = ['green','dodgerblue','red','black','yellow','gray'];
+        $color = $colors[$x];
         for ($i = 0; $i < sizeof($subs); $i++){
             $mini = $subs[$i][1];
             echo '<a class="btn btn-'.$style.'" id="sub'.$x.$i.'" style="width: 100px;">'.$subs[$i][0].'</a>'; 
             echo '<div id="minisub'.$x.$i.'" style="display: none; width: 150px;">';
-                    miniMenu("$x"."$i",$mini);
+                    miniMenu("$x"."$i",$mini,$color);
             echo '</div>';
         }
     }
