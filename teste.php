@@ -36,8 +36,11 @@
                  font-size: xx-large;  border: 2px solid green;" align="center"></div><br>
             <div id="divforms" class="well"  align="center" 
                  style="width: 150px; background-color:#FFFFFF; border: 2px solid green;">               
-                <form action="" id="formteste">                     
+                <form action="" id="formteste">  
+                    <legend>Menu</legend>
                     <?php menus(); ?>
+                    <br>
+                    <legend></legend>
                 </form>
             </div>     
         </span>
