@@ -10,53 +10,47 @@
         <style type="text/css">#box {color: #51a351;}</style>
         <script type="text/javascript" src="js/prototipoMenu.js"></script>
 
-        <link rel="stylesheet" href="css/jquery-ui.css">
-        <script src="js/jquery-ui-1.10.3.custom.js"></script>
-        <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-        
+        <link rel="stylesheet" href="auto/jquery-ui.css">
+        <script src="auto/jquery-1.9.1.js"></script>
+        <script src="auto/jquery-ui.js"></script>              
         <script type="text/javascript">
             $(document).ready(function()     {
-//                $('#auto').autocomplete({
-//                    source: "buscaDados.php",
-//                    minLength: 1
-//                });
-                
-                var tags = [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ];
-                $( "#auto" ).autocomplete({
-                  source: function( request, response ) {
-                          var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
-                          response( $.grep( tags, function( item ){
-                              return matcher.test( item );
-                          }) );
-                      }
-                });
+                $('#auto').autocomplete({
+                    source: "buscaDados.php",
+                    minLength: 1
+                });                           
             });
         </script>
+        
+        <script src="js/jQueryPost.js"></script>
     </head>
     <!------------------------------------------------------------------------->
     <body>        
-        <span>
+        <span class="span">
             <div id="box" class="well" style="width: 300px; height: 50px; font-size: xx-large;" align="center"></div><br>
             <div id="divforms" class="well"  align="center" 
                  style="width: 200px; background-color:#CDCDCD">               
-                <form action="" id="formteste">     
-    <!--                <select id="sel1" style="width: 150px;">
+                <form action="" id="formteste">                     
+                    <?php menus(); ?>
+                </form>
+            </div>     
+        </span>
+        
+        <span class="span">
+            <div id="divform" align="center">               
+                <form action="" id="form2" method="POST">    
+                    <select id="sel1" style="width: 150px;">
                         <option value="opt1">1</option>
                         <option value="opt2">2</option>
                         <option value="opt3">3</option>
                         <option value="opt4">4</option>
-                    </select>-->
-                    <?php                    
-                        menus(); 
-                    ?>
-                </form>
-            </div>     
-        </span>
-        <span>
-            <div id="divform" align="center" 
-                 style="width: 200px; background-color:#CDCDCD">               
-                <form action="" id="form">     
-                    <input type="text" id="auto" />
+                    </select>                                       
+                    <input type="text" id="auto" nome="auto"/>
+                    <br>
+                    <div align='center'>
+                        <input type="text" id="auto2" nome="auto2"/>                                          
+                        <a id="botao" value="kaciano" class='btn'>BOTAO</a>   
+                    </div>
                 </form>
             </div>     
         </span>
