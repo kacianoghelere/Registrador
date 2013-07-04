@@ -1,5 +1,7 @@
 <!doctype html>
 <html lang="en">
+    <header align='center' style="height: 50px; background-color:#CCCCCC; 
+            border: 2px solid green;"><h1>Titulo</h1></header><br>
     <head>
         <meta charset="utf-8">
         <?php 
@@ -26,13 +28,14 @@
         </script>
         
         <script src="js/jQueryPost.js"></script>
-    </head>
+    </head>    
     <!------------------------------------------------------------------------->
     <body>        
         <span class="span">
-            <div id="box" class="well" style="width: 300px; height: 50px; font-size: xx-large;" align="center"></div><br>
+            <div id="box" class="well" style="width: 300px; height: 50px; 
+                 font-size: xx-large;  border: 2px solid green;" align="center"></div><br>
             <div id="divforms" class="well"  align="center" 
-                 style="width: 200px; background-color:#CDCDCD">               
+                 style="width: 200px; background-color:#CDCDCD; border: 2px solid green;">               
                 <form action="" id="formteste">                     
                     <?php menus(); ?>
                 </form>
