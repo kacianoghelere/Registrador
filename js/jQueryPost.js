@@ -1,17 +1,7 @@
-$(document).ready(function()     {
+$(document).ready(function(){
     $('#botao').click(function(){
-        var dados = $("#auto2").serialize();
-        console.log(dados);
-        jQuery.ajax({
-            type: "POST",
-            url: "poster.php",
-            data: dados,
-            success:function(info){
-                jQuery("#box").html(info);
-            },
-            error:function(info){
-                alert('Erro no POST!');
-            }
+        $.post("poster.php", { auto2: $("#auto2").val()}).done(function(data) {
+            jQuery("#box").html(data);
         });
     });                    
 });

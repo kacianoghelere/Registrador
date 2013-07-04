@@ -18,7 +18,10 @@
                 $('#auto').autocomplete({
                     source: "buscaDados.php",
                     minLength: 1
-                });                           
+                });
+                $('#auto').blur(function (){
+                    $('#auto2').html($(this).val());
+                });
             });
         </script>
         
@@ -44,11 +47,13 @@
                         <option value="opt2">2</option>
                         <option value="opt3">3</option>
                         <option value="opt4">4</option>
-                    </select>                                       
-                    <input type="text" id="auto" nome="auto"/>
-                    <br>
-                    <div align='center'>
-                        <input type="text" id="auto2" nome="auto2"/>                                          
+                    </select>     
+                    <div>
+                        <input type="text" id="auto" nome="auto"/>
+                    </div><div>
+                        <input type="text" id="auto2" nome="auto2"/>
+                    </div>
+                    <div align='center'>                                                        
                         <a id="botao" value="kaciano" class='btn'>BOTAO</a>   
                     </div>
                 </form>
