@@ -9,10 +9,12 @@
         $color = $colors[$x];
         for ($i = 0; $i < sizeof($subs); $i++){
             $mini = $subs[$i][1];
-            echo '<a class="btn btn-'.$style.'" id="sub'.$x.$i.'" style="width: 100px;">'.$subs[$i][0].'</a>'; 
-            echo '<div id="minisub'.$x.$i.'" style="display: none; width: 150px;">';
+            echo '<div>menu'.$x.'sub'.$i.'</div>';
+            echo '<a class="btn btn-'.$style.'" id="'.$x.'sub'.$i.'" style="width: 100px;" 
+                onclick="showMini(this.id)">'.$subs[$i][0].'</a>'; 
+            echo '<div id="menu'.$x.'sub'.$i.'" style="width: 150px; display: none;">';
                     miniMenu("$x"."$i",$mini,$color);
-            echo '</div>';
+            echo '</div>';            
         }
     }
     function menu($menus){
@@ -20,11 +22,13 @@
         for ($i = 0; $i < sizeof($menus); $i++){  
             $menu = $menus[$i][1];
             echo "<div>";
-                echo "<a class='btn btn-".$style[$i]."' id='menu".$i."' style='width: 100px;  border: 1px solid black;'>".$menus[$i][0]."</a>";
-                echo "<div id='menu".$i."sub' style='display: none; width: 150px;'>";  
+                echo "<a class='btn btn-".$style[$i]."' id='menu".$i."' onclick='showSub(this.id)' 
+                    style='width: 100px; border: 1px solid black;'>".$menus[$i][0]."</a>";
+                echo "<div id='menu".$i."sub' style='width: 150px; display: none;'>";  
                     subMenu($i,$style[$i],$menu);            
                 echo "</div>";
             echo "</div>";
+            echo "<br><legend></legend>";
         }
     }
     function menus() {

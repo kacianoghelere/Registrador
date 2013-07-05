@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="en">
-    <header align='center' style="height: 50px; background-color:#CCCCCC; 
-            border: 2px solid green;"><h1>Titulo</h1></header><br>
     <head>
         <meta charset="utf-8">
         <?php 
             include('header.php'); 
             include 'subMenus.php';
+            include 'bdSelect.php';
         ?>
         <title>Teste JQuery</title>
         <style type="text/css">#box {color: #51a351;}</style>
@@ -24,6 +23,9 @@
                 $('#auto').blur(function (){
                     $('#auto2').html($(this).val());
                 });
+                $('#sel1').blur(function (){
+                    
+                });
             });
         </script>
         
@@ -36,11 +38,10 @@
                  font-size: xx-large;  border: 2px solid green;" align="center"></div><br>
             <div id="divforms" class="well"  align="center" 
                  style="width: 150px; background-color:#FFFFFF; border: 2px solid green;">               
-                <form action="" id="formteste">  
+                <form action="" id="formteste">                      
                     <legend>Menu</legend>
                     <?php menus(); ?>
                     <br>
-                    <legend></legend>
                 </form>
             </div>     
         </span>
@@ -49,10 +50,7 @@
             <div id="divform" align="center">               
                 <form action="" id="form2" method="POST">    
                     <select id="sel1" style="width: 150px;">
-                        <option value="opt1">1</option>
-                        <option value="opt2">2</option>
-                        <option value="opt3">3</option>
-                        <option value="opt4">4</option>
+                        <?php popular(); ?>
                     </select>     
                     <div>
                         <input type="text" id="auto" nome="auto"/>
