@@ -1,6 +1,6 @@
-<?php
-    include('infoPainel.php');
-    include_once('./config/TabelaUsuario.php');
+<?php 
+    require_once './config/TabelaUsuario.php';
+    include_once 'infoPainel.php';
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -9,6 +9,7 @@
         <title>Painel do usuário logado</title>
         <?php include('header.php'); ?>
         <script type="text/javascript" src="js/funcTabela.js"></script>             
+        <script type="text/javascript" src="js/AlterarTabela.js"></script>
     </head>
     <body>
         <div>
@@ -22,13 +23,10 @@
                 </ul>
                 <a class="btn btn-danger" href="sair.php">Sair</a>
             </div>
+            <a href='#' class="btn btn-danger" >Cadastrados</a>
             <div id="box" class="well" style="width: 700px; display:none;">
                 <table class="table table-bordered table-hover">
-                    <?php
-                        //Exibe as linhas encontradas na consulta
-                        while ($row = mysql_fetch_array($info)) {
-                    ?>
-                    <caption><strong>Cadastrados</strong></caption>
+                    <legend><strong>Cadastrados</strong><div id="box2"/></legend>                    
                     <thead>
                         <th>#</th>
                         <th>Codigo</th>
@@ -36,19 +34,13 @@
                         <th>Senha</th>
                         <th>Nome</th>
                     </thead>
-                    <tr>
-                        <td> <?php echo $row['idusu'];   ?></td>                    
-                        <td> <?php echo $row['altcod'];  ?></td>
-                        <td> <?php echo $row['codusu'];  ?></td>
-                        <td> <?php echo $row['senusu'];  ?></td>
-                        <td> <?php echo $row['nomeusu']; ?></td>
-                    </tr>
-                    <?php
-                        }
-                    ?>
+                    <tbody>
+                        <?php                             
+                            setRows($info); 
+                        ?>
+                    </tbody>
                 </table>            
-            </div>            
-            <a href='#' class="btn btn-danger" >Cadastrados</a>
+            </div>                       
         </div>
     </body>
 </html>
