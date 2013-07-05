@@ -20,7 +20,7 @@ $(function($) {
             else
             {
                 // Encondendo loader
-                $('div.loader').hide();
+                $('div.loader').hide('slow');
 
                 // Exibimos a mensagem de erro
                 $('div.mensagem-erro').html(resposta);
