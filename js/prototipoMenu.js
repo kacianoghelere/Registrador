@@ -1,16 +1,24 @@
 $(document).ready(function(){           
     for (var i = 0; i < 5; i++){
-        $("#menu"+i).click(function(){   
+        $("#menu"+i).click(function(){             
             if ($("#"+$(this).attr('id')+"sub").css('display') === 'none') {                        
                 $("#"+$(this).attr('id')+"sub").fadeIn();                    
                 $("#"+$(this).attr('id')+"sub").css('display','inline-block');                
                 $("#box").html($(this).attr('id')+" aberto!"); 
-            } else {
+            } else {                    
+                closeAll(i);
                 $("#"+$(this).attr('id')+"sub").fadeOut();
-                $("#"+$(this).attr('id')+"sub").css('display','none');                
+                $("#"+$(this).attr('id')+"sub").css('display','none');                 
                 $("#box").html($(this).attr('id')+" fechado!");  
             }               
         });        
+    }
+    function closeAll(i){
+        for (var j = 0; j < 5; j++){ 
+            for (var h = 0; h < 5; h++){                 
+                $("#minisub"+i+j+h).css('display','none');
+            } 
+        }
     }
     for (var i = 0; i < 5; i++){
         for (var j = 0; j < 6; j++){

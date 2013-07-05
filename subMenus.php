@@ -28,14 +28,19 @@
         }
     }
     function menus() {
+        //----------------------------------------------------------------------
         $sub1[1] = ["Cadastrar","Alterar","Excluir"];
         $sub1[2] = ["Cadastrar","Alterar"];
         $menu[1] = [["Usuarios",$sub1[1]],["Funcionarios",$sub1[2]]];
-
+        //----------------------------------------------------------------------
         $sub2[1] = ["Por data","Por numero"];
         $menu[2] = [["Historico",$sub2[1]]];
-
-        $menus = [["Cadastros",$menu[1]],["NF",$menu[2]]];
+        //----------------------------------------------------------------------
+        $sub3[1] = ["Marcas","Distribuidores"];
+        $sub3[2] = ["Estoque","Valores","Conferencia"];
+        $menu[3] = [["Informações",$sub3[1]],["Controle",$sub3[2]]];
+        //----------------------------------------------------------------------
+        $menus = [["Cadastros",$menu[1]],["NF",$menu[2]],["Produtos",$menu[3]]];
         menu($menus);
     }
 ?>
