@@ -1,7 +1,7 @@
-<?php 
-    require_once './config/TabelaUsuario.php';
-    include_once './config/infoPainel.php';
+<?php    
     include './config/subMenus.php';  
+    require 'config/TabelaUsuario.php';
+    include 'config/infoPainel.php';
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -9,8 +9,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Painel do usuário logado</title>
         <?php include('./config/header.php'); ?>
-        <script type="text/javascript" src="js/funcTabela.js"></script>             
-        <script type="text/javascript" src="js/AlterarTabela.js"></script>
         <script type="text/javascript" src="js/prototipoMenu.js"></script>
     </head>
     <body>
@@ -33,11 +31,8 @@
                         <br>
                     </form>
                 </div> 
-                <div class="span12 well" style="height: 800px; background-color:#CDCDCD; border: 2px solid graytext;">
-                    <a href='#' class="btn btn-danger" id="showtabela" onclick="mostrarTabela(this.id)">Cadastrados</a>
-                    <div id="tabela" class="well" style="width: 700px; display:none;">
-                        <?php setRows($info); ?>           
-                    </div>  
+                <div class="span12  container-fluid well" style="height: 800px; background-color:#CDCDCD; border: 2px solid graytext;">
+                    <div id="tabela" class="well" style="width: 700px; display:none;"></div>  
                 </div>                         
             </div>
         </div>

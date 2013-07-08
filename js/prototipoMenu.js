@@ -13,7 +13,9 @@ function showMini(id){
     }    
 }
 $(document).ready(function (){
-    $('a').click(function (){
-        alert($(this).attr('id'));
+    $('#mini000').click(function (){
+        alert($(this).children().attr('id'));
+        $('#tabela').show();
+        $('#tabela').load('config/mini000.php');        
     });
 });

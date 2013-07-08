@@ -16,7 +16,7 @@
     $usuario = mysql_fetch_object($query);    
     
     function setRows($res){
-        echo '<table class="table">';
+        echo '<table class="table table-hover">';
             echo '<legend><strong>Cadastrados</strong><div id="box2"/></legend>';                    
             echo '<thead>';
                 echo '<th>#</th>';
@@ -37,5 +37,5 @@
             }   
             echo '</tbody>';
         echo '</table>';
-    }    
+    }       
 ?>
