@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Testes com modal</title>
-        <?php include 'header.php'; ?>
+        <?php include 'config/header.php'; ?>
         <script src="js/jquery.inputmask.js"></script>
         <script src="js/JQuery.Validate.js"></script>
         <script src="js/validaCpf.js"></script>

@@ -12,7 +12,7 @@ $(function () {
                 if (e.which === 13) {
                     var parId = (""+$(this).parent().attr('id'));
                     var split = parId.split('-');          
-                    $.post("alterBDTabela.php", {
+                    $.post("config/alterBDTabela.php", {
                         col: split[0],
                         valor: $("#newValue").val(),
                         where: split[1]

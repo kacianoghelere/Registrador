@@ -12,3 +12,8 @@ function showMini(id){
         $("#menu"+id).show();
     }    
 }
+$(document).ready(function (){
+    $('a').click(function (){
+        alert($(this).attr('id'));
+    });
+});

@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <?php 
-            include('header.php'); 
-            include 'subMenus.php';
-            include 'bdSelect.php';
+            include('./config/header.php'); 
+            include './config/subMenus.php';
+            include './config/bdSelect.php';
         ?>
         <title>Teste JQuery</title>
         <style type="text/css">#box {color: #51a351;}</style>
