@@ -1,18 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package org.src.frames;
 
-/**
- *
- * @author win
- */
 public class InternalFrame1 extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form InternalFrame1
-     */
+ 
+    
     public InternalFrame1() {
         initComponents();        
     }
@@ -38,8 +29,14 @@ public class InternalFrame1 extends javax.swing.JInternalFrame {
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
 
+        setClosable(true);
         setIconifiable(true);
         setTitle("Registrar");
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                formMouseExited(evt);
+            }
+        });
 
         jFormattedTextField1.setText("jFormattedTextField1");
 
@@ -140,6 +137,12 @@ public class InternalFrame1 extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseExited
+        Int1Running int1 = new Int1Running();
+        int1.setRunning(false);
+    }//GEN-LAST:event_formMouseExited
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel2;
@@ -153,4 +156,5 @@ public class InternalFrame1 extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
+
 }
