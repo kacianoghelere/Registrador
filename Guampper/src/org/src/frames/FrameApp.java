@@ -2,15 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.src;
+package org.src.frames;
 
 import java.awt.event.*;
 import javax.swing.*;
 
-/**
- *
- * @author win
- */
 public class FrameApp extends javax.swing.JFrame {
 
     public FrameApp() {
@@ -70,6 +66,9 @@ public class FrameApp extends javax.swing.JFrame {
                     jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
                     jXTaskPaneContainer1.setBackground(new java.awt.Color(102, 153, 255));
+                    org.jdesktop.swingx.VerticalLayout verticalLayout1 = new org.jdesktop.swingx.VerticalLayout();
+                    verticalLayout1.setGap(14);
+                    jXTaskPaneContainer1.setLayout(verticalLayout1);
 
                     jXTaskPane1.setCollapsed(true);
                     jXTaskPane1.setTitle("Teste");
@@ -88,8 +87,8 @@ public class FrameApp extends javax.swing.JFrame {
                     jPanel2Layout.setVerticalGroup(
                         jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                            .addGap(0, 0, Short.MAX_VALUE)
-                            .addComponent(jXTaskPaneContainer1, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(0, 0, 0)
+                            .addComponent(jXTaskPaneContainer1, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE))
                     );
 
                     jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -158,8 +157,8 @@ public class FrameApp extends javax.swing.JFrame {
                     layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(0, 0, 0))
                     );
 
                     pack();
