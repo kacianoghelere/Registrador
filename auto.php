@@ -19,11 +19,11 @@
             function highlight(id) {
                 $('#box').html('Sobre o #'+id);             
                 setColor($('#'+id).css('background-color'),id);
-                $('#'+id).css('background-color','#ff8800');
+                $('#'+id).css('background-color','#ff8800');                
             }
             function offlight(id) {
                 $('#box').html('Saiu do '+id);
-                $('#'+id).css('background-color',getColor(id));
+                $('#'+id).css('background-color',getColor(id));                
             }
             function setColor(cor,id){
                 color[id] = cor;                
@@ -49,35 +49,21 @@
         <div id="box" class="well" style="width: 300px;"></div>
         <br><br>
         <form style=" margin-left: 20px;" class="span" id="menus">
-<!--            <div class="span">
-                <div id="menu1" align="center" style="width: 100px; height: 50px; 
-                     background-color: #0088cc; color: #FFFFFF;"
-                     onmouseover="highlight(this.id);" onmouseout="offlight(this.id);"
-                     onclick="showSubs(this.id);">Menu1</div>     
-                ---------------------------------------------------------
-                <div id="menu1sub" style="display: none; z-index: 9999;">
-                     <div onmouseover="highlight(this.id);" onmouseout="offlight(this.id);"
-                         id="menu1sub1" style="width: 100px; height: 25px; margin-top: 1px;
-                     background-color: #0088cc; color: #FFFFFF; z-index: 9999;"></div>
-                     <div onmouseover="highlight(this.id);" onmouseout="offlight(this.id);"
-                         id="menu1sub2" style="width: 100px; height: 25px; margin-top: 1px;
-                     background-color: #0088cc; color: #FFFFFF; z-index: 9999;"></div>
-                </div>
-            </div>-->
-            <?php
-            $colors = ['#0088cc','','','',''];
-            for ($i = 1; $i <= 5; $i++){
+            <?php            
+            $colors = ["#0088cc","#499249","#a9302a","#d3d3d3","#cd0a0a","#7ab5d3"];                   
+            for ($i = 0; $i < 5; $i++){
                 echo '<div class="span">';
                     echo '<div id="menu'.$i.'" align="center" style="width: 100px; height: 50px; ';
-                         echo 'background-color: #0088cc; color: #FFFFFF;"';
+                         echo 'background-color: '.$colors[$i].'; color: #FFFFFF;"';
                          echo 'onmouseover="highlight(this.id);" onmouseout="offlight(this.id);"';
-                         echo 'onclick="showSubs(this.id);">Menu'.$i.'</div>     ';
+                         echo 'onclick="showSubs(this.id);">Menu'.($i+1).'</div>     ';
                     echo '<!------------------------------------------------------------->';
                     echo '<div id="menu'.$i.'sub" style="display: none; z-index: 9999;">';
-                    for ($j = 1; $j <= 3; $j++){
+                    for ($j = 0; $j < 3; $j++){
                          echo '<div onmouseover="highlight(this.id);" onmouseout="offlight(this.id);"';
-                             echo 'id="menu'.$i.'sub'.$j.'" style="width: 100px; height: 25px; margin-top: 1px;';
-                         echo 'background-color: #0088cc; color: #FFFFFF; z-index: 9999;"></div>';
+                             echo 'id="menu'.($i+1).'sub'.$j.'" style="width: 100px; height: 25px; margin-top: 1px;';
+                         echo 'background-color: '.$colors[$i].'; color: #FFFFFF; z-index: 9999;"
+                             align="center">Sub'.($j+1).'</div>';
                     }     
                     echo '</div>';            
                 echo '</div>';
