@@ -24,8 +24,9 @@ public class FrameApp extends javax.swing.JFrame {
                 @Override
                 public void actionPerformed(ActionEvent ex) {
                     if1 = new InternalFrame1();
-                    int1.setRunning(false);
-                    if (!int1.isRunning()) {
+                    if (int1.isRunning()) {
+                        System.out.println("CU");
+                    } else {
                         if1.setVisible(true);
                         jDesktopPane1.add(if1);
                         int1.setRunning(true);
@@ -87,7 +88,7 @@ public class FrameApp extends javax.swing.JFrame {
                         jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                             .addGap(0, 0, 0)
-                            .addComponent(jXTaskPaneContainer1, javax.swing.GroupLayout.DEFAULT_SIZE, 532, Short.MAX_VALUE))
+                            .addComponent(jXTaskPaneContainer1, javax.swing.GroupLayout.DEFAULT_SIZE, 536, Short.MAX_VALUE))
                     );
 
                     jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());

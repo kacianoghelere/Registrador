@@ -1,7 +1,7 @@
 package org.src.frames;
 
 public class InternalFrame1 extends javax.swing.JInternalFrame {
-
+    Int1Running int1 = new Int1Running();
  
     
     public InternalFrame1() {
@@ -139,7 +139,6 @@ public class InternalFrame1 extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseExited
-        Int1Running int1 = new Int1Running();
         int1.setRunning(false);
     }//GEN-LAST:event_formMouseExited
 
